@@ -29,15 +29,17 @@ for i in range(5):               #Player Move Locations
     elif CurrentMove < 10:
         TileData[2][CurrentMove - 7] = "X"
 
-    if i == 5:           #To Break Out Of Loop Under All Circumstances
+    if i == 4:           #To Break Out Of Loop Under All Circumstances
         break
 
-    while BreakOut == False:          #Infinite loop only breakable by the break command after computer move
+    while BreakOut == False:                            #Infinite loop only breakable by the break command after computer move
         ComputerMove = random.randint(0, 2)             # row value
         ComputerMove2 = random.randint(0, 2)            # Column Value
 
-        if TileData[ComputerMove][ComputerMove2] != "X" and "O":
+        if TileData[ComputerMove][ComputerMove2] != "X" and TileData[ComputerMove][ComputerMove2] != "O":
             TileData[ComputerMove][ComputerMove2] = "O"
             break
 
     updateTable()
+
+print("Game Ends")

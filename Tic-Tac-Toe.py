@@ -1,4 +1,5 @@
 # My take on tic-tac-toe
+# The user picks X and the computer picks O by default
 
 import random          #For Random Computer Move
 
@@ -12,10 +13,8 @@ def startingInstructions():
     print("When Prompted Just Input The Location Where You Want To Put The X")
 
 def updateTable():                   # Visualizes The Table
-    for r in TileData:
-        for c in r:
-            print(c,end = " ")
-        print()
+    for row in TileData: 
+        print(row) 
 
 startingInstructions()
 updateTable()
